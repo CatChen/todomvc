@@ -57,6 +57,63 @@ body {
 	text-decoration: line-through;
 }
 
+#todoApp .item .edit {
+    display: none;
+}
+
+#todoApp .item.editing .view {
+    display: none;
+}
+
+#todoApp .item.editing .edit {
+    display: block;
+}
+
+#todoApp .item .button {
+    text-indent: -9999px;
+    display: none;
+	position: absolute;
+	right: 10px;
+	top: 16px;
+	width: 20px;
+	height: 20px;
+	background-color: #cccccc;
+	border-radius: 10px 10px 10px 10px;
+	cursor: pointer;
+}
+
+#todoApp .item:hover .button {
+    display: block;
+}
+
+#todoApp .item .button:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 5px;
+    top: 9px;
+    background-color: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+
+#todoApp .item .button:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 5px;
+    top: 9px;
+    background-color: #ffffff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+}
+
+#todoApp .item .button:hover {
+	background-color: #333333;
+}
+
 #todoApp footer {
 	margin: 20px -20px -20px -20px;
 	overflow: hidden;
@@ -81,6 +138,16 @@ body {
 	border-radius: 12px;
 	box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0; 
 	cursor: pointer;
+}
+
+#todoApp footer .button:hover {
+	background: rgba(0, 0, 0, 0.15);
+	box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+}
+
+#todoApp footer .button:active {
+    position: relative;
+	top: 1px;
 }
 
 #todoApp .count {
