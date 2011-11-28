@@ -114,6 +114,11 @@ body {
 	background-color: #333333;
 }
 
+#todoApp .item .button:active {
+    right: 9px;
+	top: 17px;
+}
+
 #todoApp footer {
 	margin: 20px -20px -20px -20px;
 	overflow: hidden;
