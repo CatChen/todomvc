@@ -1,0 +1,21 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4em;
+	background: #eeeeee;
+	color: #333333;
+}
+
+#todoApp {
+    width: 480px;
+    padding: 20px;
+    margin: 0 auto 40px;
+	background: white;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	border-radius: 0 0 5px 5px;
+}
