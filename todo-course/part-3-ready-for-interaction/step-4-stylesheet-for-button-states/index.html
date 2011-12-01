@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="UTF-8">
+	    <title>TodoMVC Course</title>
+    	<link rel="stylesheet" href="stylesheets/app.css">
+    </head>
+    <body>
+	    <div id="todoApp">
+	        <h1>Todos</h1>
+	        <form>
+	            <input type="text" placeholder="What needs to be done?" />
+	        </form>
+	        <ul class="items">
+	            <li class="item">
+	                <div class="view" title="Double click to edit...">
+    	                <input type="checkbox" />
+    	                <span>Build Sammy.js application</span>
+    	                <a class="delete button">delete</a>
+	                </div>
+            		<div class="edit">
+            			<input type="text" value="Build Sammy.js application" />
+            		</div>
+	            </li>
+	            <li class="item">
+	                <div class="view" title="Double click to edit...">
+    	                <input type="checkbox" />
+    	                <span>Test SproutCore Todo app</span>
+    	                <a class="delete button">delete</a>
+	                </div>
+            		<div class="edit">
+            			<input type="text" value="Test SproutCore Todo app" />
+            		</div>
+	            </li>
+	            <li class="item completed">
+	                <div class="view" title="Double click to edit...">
+    	                <input type="checkbox" />
+    	                <span>Testing</span>
+    	                <a class="delete button">delete</a>
+	                </div>
+            		<div class="edit">
+            			<input type="text" value="Testing" />
+            		</div>
+	            </li>
+	            <li class="item editing">
+	                <div class="view" title="Double click to edit...">
+    	                <input type="checkbox" />
+    	                <span>Review best-practices</span>
+    	                <a class="delete button">delete</a>
+	                </div>
+            		<div class="edit">
+            			<input type="text" value="Review best-practices" />
+            		</div>
+	            </li>
+	        </ul>
+	        <footer>
+	            <div class="count"><span class="number">3</span> left</div>
+	            <a class="clear button">Clear completed</a>
+	        </footer>
+	    </div>
+    </body>
+</html>

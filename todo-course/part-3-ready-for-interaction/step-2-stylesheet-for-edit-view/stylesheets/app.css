@@ -1,0 +1,104 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4em;
+	background: #eeeeee;
+	color: #333333;
+}
+
+#todoApp {
+    width: 480px;
+    padding: 20px;
+    margin: 0 auto 40px;
+	background: white;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	border-radius: 0 0 5px 5px;
+}
+
+#todoApp h1 {
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+#todoApp input[type="text"] {
+	width: 466px;
+	font-size: 24px;
+	font-family: inherit;
+	line-height: 1.4em;
+	border: 0;
+	outline: none;
+	padding: 6px;
+	border: 1px solid #999999;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+
+#todoApp .items {
+	margin: 10px 0;
+	padding: 0;
+	list-style: none;
+}
+
+#todoApp .item {
+	padding: 15px 20px 15px 0;
+	position: relative;
+	font-size: 24px;
+	border-bottom: 1px solid #cccccc;
+}
+
+#todoApp .item.completed span {
+	color: #777777;
+	text-decoration: line-through;
+}
+
+#todoApp .item .edit {
+    display: none;
+}
+
+#todoApp .item.editing .view {
+    display: none;
+}
+
+#todoApp .item.editing .edit {
+    display: block;
+}
+
+#todoApp footer {
+	margin: 20px -20px -20px -20px;
+	overflow: hidden;
+	color: #555555;
+	background: #f4fce8;
+	border-top: 1px solid #ededed;
+	padding: 0 20px;
+	line-height: 36px;
+	border-radius: 0 0 5px 5px;
+}
+
+#todoApp footer .button {
+	float: right;
+	line-height: 20px;
+	text-decoration: none;
+	background: rgba(0, 0, 0, 0.1);
+	color: #555555;
+	font-size: 11px;
+	margin-top: 8px;
+	margin-bottom:8px;
+	padding: 0 10px 1px;
+	border-radius: 12px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0; 
+	cursor: pointer;
+}
+
+#todoApp .count {
+    float: left;
+}
+
+#todoApp .count .number {
+    font-weight: bold;
+}
