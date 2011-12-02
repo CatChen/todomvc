@@ -1,4 +1,19 @@
 $(document).ready(function() {
+    var todos = Store.load() || [];
+    $.each(todos, function(index, todo) {
+        var item = $('<li class="item"><div class="view"><input type="checkbox" /><span></span><a class="delete button">delete</a></div><div class="edit"><input type="text" /></div></li>');
+        item.toggleClass('completed', todo.completed);
+        item.find('.view').attr('title', todo.title);
+        item.find('.view input').attr('checked', todo.completed);
+        item.find('.view span').text(todo.title);
+        item.find('.edit input').val(todo.title);
+        item.data('todo', todo);
+
+        $('.items').append(item);
+        
+        $('.number').text($('.item:not(.completed)').length);
+    });
+    
     /* on creating a new item */
     $('form').on('submit', function(e) {
         e.preventDefault();
@@ -20,6 +35,14 @@ $(document).ready(function() {
         $('.items').append(item);
         
         $('.number').text($('.item:not(.completed)').length);
+        
+        var todo = {
+            title: title,
+            completed: false
+        };
+        item.data('todo', todo);
+        todos.push(todo)
+        Store.save(todos);
     });
 
     /* on changing item's completion */
@@ -28,6 +51,9 @@ $(document).ready(function() {
         item.toggleClass('completed', $(this).is(':checked'));
         
         $('.number').text($('.item:not(.completed)').length);
+        
+        item.data('todo').completed = $(this).is(':checked');
+        Store.save(todos);
     });
 
     /* on switching to edit mode */
@@ -52,6 +78,9 @@ $(document).ready(function() {
         item.removeClass('editing');
         item.find('.view').attr('title', title);
         item.find('.view span').text(title);
+        
+        item.data('todo').title = title;
+        Store.save(todos);
     });
 
     /* on deleting an item */
@@ -60,8 +89,22 @@ $(document).ready(function() {
         item.remove();
         
         $('.number').text($('.item:not(.completed)').length);
+        
+        todos.length = 0;
+        $('.item').each(function(index, item) {
+            todos.push($(item).data('todo'));
+        });
+        Store.save(todos);
     });
 
     /* on clearing completed items */
-    $('.clear').on('click', function(e) {});    
+    $('.clear').on('click', function(e) {
+        $('.item.completed').remove();
+        
+        todos.length = 0;
+        $('.item').each(function(index, item) {
+            todos.push($(item).data('todo'));
+        });
+        Store.save(todos);
+    });    
 });
