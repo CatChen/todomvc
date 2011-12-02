@@ -25,7 +25,7 @@ $(document).ready(function() {
     /* on changing item's completion */
     $('.items').on('change', 'input[type=checkbox]', function(e) {
         var item = $(this).closest('.item');
-        item.toggleClass('completed', $(this).checked);
+        item.toggleClass('completed', $(this).is(':checked'));
         
         $('.number').text($('.item:not(.completed)').length);
     });
