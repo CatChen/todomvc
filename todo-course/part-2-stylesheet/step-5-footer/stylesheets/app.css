@@ -47,7 +47,6 @@ body {
 
 #todoApp .item {
 	padding: 15px 20px 15px 0;
-	position: relative;
 	font-size: 24px;
 	border-bottom: 1px solid #cccccc;
 }
