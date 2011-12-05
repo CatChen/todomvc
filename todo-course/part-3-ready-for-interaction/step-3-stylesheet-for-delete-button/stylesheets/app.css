@@ -81,7 +81,7 @@ body {
 	cursor: pointer;
 }
 
-#todoApp .item .button:before {
+#todoApp .item .button::before {
     content: '';
     position: absolute;
     width: 10px;
@@ -93,7 +93,7 @@ body {
     -moz-transform: rotate(45deg);
 }
 
-#todoApp .item .button:after {
+#todoApp .item .button::after {
     content: '';
     position: absolute;
     width: 10px;
