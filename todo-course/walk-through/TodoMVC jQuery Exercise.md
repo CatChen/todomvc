@@ -73,7 +73,7 @@ This is what we call naked HTML page. There is no styling and the browser render
 
 As long as the page is written in meaningful markup, styling the page should be easy. In order to make sure that styling rules are manageable, we create a CSS file instead of writing rules within the markup. Then we need to reference the CSS file from the page. Insert this line into the `head` section of HTML.
 
-    <link rel="stylesheet" href="stylesheets/app.css">
+    <link rel="stylesheet" href="stylesheets/app.css" />
 
 ### Step 1: Setup the Page
 
