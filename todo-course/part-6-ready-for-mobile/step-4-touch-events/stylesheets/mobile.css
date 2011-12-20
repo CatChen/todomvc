@@ -57,10 +57,12 @@
 
 #todoApp footer .button {
 	float: right;
+	margin-right: 15px;
 }
 
 #todoApp .count {
     float: left;
+    margin-left: 15px;
     line-height: 32px;
 }
 
