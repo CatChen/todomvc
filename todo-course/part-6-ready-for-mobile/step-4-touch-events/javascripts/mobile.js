@@ -37,11 +37,25 @@ $(document).on('pageinit', '#todoApp', function(e) {
         });
     });
     
+    var touchMoved;
+    
+    $(document).on('touchstart', function(e) {
+        touchMoved = false;
+    });
+    
+    $(document).on('touchmove', function(e) {
+        touchMoved = true;
+    });
+    
     /* on switching to edit mode */
     $('.items').on('touchend', '.item', function(e) {
-        var item = $(this).closest('.item');
-        item.addClass('editing');
-        item.find('.edit input').focus();
+        if (!touchMoved) {
+            var item = $(this).closest('.item');
+            item.addClass('editing');
+            setImmediate(function() {
+                item.find('.edit input').focus();
+            });
+        }
     });
 
     /* on touching item's completion checkbox */
