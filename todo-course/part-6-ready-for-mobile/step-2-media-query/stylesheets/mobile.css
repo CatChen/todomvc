@@ -1,0 +1,68 @@
+#todoApp .item {
+	position: relative;
+}
+
+#todoApp .item.completed span {
+	color: #777777;
+	text-decoration: line-through;
+}
+
+#todoApp .item .edit {
+    display: none;
+}
+
+#todoApp .item.editing .view {
+    display: none;
+}
+
+#todoApp .item.editing .edit {
+    display: block;
+}
+
+#todoApp .item .button {
+    text-indent: -9999px;
+	position: absolute;
+	right: 10px;
+	top: 16px;
+	width: 20px;
+	height: 20px;
+	background-color: #cccccc;
+	border-radius: 10px 10px 10px 10px;
+	cursor: pointer;
+}
+
+#todoApp .item .button::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 5px;
+    top: 9px;
+    background-color: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+
+#todoApp .item .button::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 5px;
+    top: 9px;
+    background-color: #ffffff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+}
+
+#todoApp footer .button {
+	float: right;
+}
+
+#todoApp .count {
+    float: left;
+}
+
+#todoApp .count .number {
+    font-weight: bold;
+}
