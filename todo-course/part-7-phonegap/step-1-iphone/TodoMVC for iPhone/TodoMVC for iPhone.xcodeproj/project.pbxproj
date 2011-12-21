@@ -33,6 +33,7 @@
 		4E6C91C714A1BBDD002E94A9 /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E6C91C614A1BBDD002E94A9 /* Capture.bundle */; };
 		4E6C91C914A1BBDD002E94A9 /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E6C91C814A1BBDD002E94A9 /* PhoneGap.plist */; };
 		4E6C91CD14A1BBDD002E94A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C91CC14A1BBDD002E94A9 /* AppDelegate.m */; };
+		4E6C91D614A1BD0A002E94A9 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 4E6C91D514A1BD0A002E94A9 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		4E6C91CB14A1BBDD002E94A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		4E6C91CC14A1BBDD002E94A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		4E6C91CF14A1BBDD002E94A9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		4E6C91D514A1BD0A002E94A9 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		4E6C917A14A1BBDA002E94A9 = {
 			isa = PBXGroup;
 			children = (
+				4E6C91D514A1BD0A002E94A9 /* www */,
 				4E6C91A614A1BBDC002E94A9 /* TodoMVC for iPhone */,
 				4E6C918B14A1BBDB002E94A9 /* Frameworks */,
 				4E6C918914A1BBDB002E94A9 /* Products */,
@@ -291,6 +294,7 @@
 				4E6C91C514A1BBDD002E94A9 /* Default@2x.png in Resources */,
 				4E6C91C714A1BBDD002E94A9 /* Capture.bundle in Resources */,
 				4E6C91C914A1BBDD002E94A9 /* PhoneGap.plist in Resources */,
+				4E6C91D614A1BD0A002E94A9 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
