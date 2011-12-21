@@ -151,6 +151,8 @@ The whole app looks better now, but we still need to add some adjustment to the 
 
 The app looks more like what we want now, though we can notice that the list items aren't styled as jQuery Mobile list items because they are programmatically added to the list. We will get this fix in the next step.
 
+![added jQuery Mobile](https://img.skitch.com/20111221-biuhh62fppxjmdw48ssmjau6t5.jpg)
+
 ### Step 4: Handling Touch Events
 
 We add mobile.js to handle mobile related behaviors, then we add the reference in the page.
@@ -254,6 +256,8 @@ One more thing. We still have one minor tweak to the stylesheet.
     }
 
 Now the app should look exactly the same as expect and it behaves like a native touchable app.
+
+![finished app](https://img.skitch.com/20111220-f1p4x2h49q2e6swnr51ramf3yf.jpg)
 
 ## Conclusion
 
