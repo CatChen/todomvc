@@ -14,6 +14,19 @@ Before building an interactive web app, we need to build a static web page that 
 
 ### Step 1: Layout
 
+First, we need to set up a page template. We can use the `DOCTYPE` for HTML5.
+
+	<!DOCTYPE html>
+	<html>
+    	<head>
+	    	<meta charset="UTF-8">
+		    <title>TodoMVC Course</title>
+    	</head>
+	    <body>
+	    	
+	    </body>
+	</html>
+
 As we can see, the mockup can be vertically divided into 4 sections: the header, the text field for creating new todo, the list of todos, and the footer with status and a button. Thus we can divide the web page into 4 sections.
 
     <div id="todoApp">
@@ -61,7 +74,7 @@ In order to construct items within a list, we need to put `li` (list item) withi
 The footer contains the status and a button. We can simply use `div` and `span` to construct the status and use `a` for a button.
 
     <div class="count"><span class="number">3</span> left</div>
-    <a clear="clear button">Clear completed</a>
+    <a class="clear button">Clear completed</a>
 
 After filling the layout with content, the markup is finished. Without any styling, it should look like this in a browser.
 
@@ -366,7 +379,7 @@ The preview doesn't change a lot. What matters is when we move the mouse cursor 
 
 ## Part 4: Interaction powered by jQuery
 
-We finally get to the part that we need to use JavaScript. In order to make JavaScript easy for us, we use jQuery. The very first thing we need to do is reference jQuery and our own JavaScript file in the markup.
+We finally get to the part that we need to use JavaScript. In order to make JavaScript easy for us, we use jQuery. The very first thing we need to do is reference jQuery and our own JavaScript file in the markup. Add the following code to the `head` section.
 
     <script type="text/javascript" src="javascripts/jquery-1.7.1.js"></script>
     <script type="text/javascript" src="javascripts/app.js"></script>
@@ -506,7 +519,7 @@ HTML5 Local Storage (`localStorage`) can help us with storing large chunk of dat
 
 ### Step 1: Designing Module Interface
 
-Instead of accessing `localStorage` directly from the event handlers, we should build a module dedicated to storage management. This module should have simple interface so event handlers don't need to know how the data is stored. This module should also have its own file, so we create a new JavaScript file and add the reference to the page.
+Instead of accessing `localStorage` directly from the event handlers, we should build a module dedicated to storage management. This module should have simple interface so event handlers don't need to know how the data is stored. This module should also have its own file, so we create a new JavaScript file and add the reference to the page. Because this module is used by our app module, so its reference should be inserted before the reference to `app.js`.
 
     <script type="text/javascript" src="javascripts/store.js"></script>
 

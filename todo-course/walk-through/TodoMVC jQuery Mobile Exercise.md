@@ -8,6 +8,8 @@ In this exercise, we are going to upgrade our Todo App and make it compatible wi
 
 The whole exercise is going to walk you through steps from adding viewport meta tag to handling touch events. If you get into a problem and can't figure out how to get a specific step done, feel free to read the [reference code](https://github.com/CatChen/todomvc/tree/courses/todo-course) on Github.
 
+In order to test what we are going to implement, iOS Simulator, Android Emulator or a device using either system is recommended. Mac OS X users can get iOS Simulator for free by installing Xcode from App Store. Windows users can get Android Emulator from Google's website. In case none of them is available, we can always resize Google Chrome's window to be narrower than 320px in order to see the mobile view. However, it's impossible to test touch event with Google Chrome so far.
+
 ## Part 6: Get Ready for Mobile
 
 _Please see TodoMVC jQuery Exercise for Part 1 to Part 5._
@@ -110,7 +112,7 @@ Because jQuery Mobile comes with stylesheet, we can leave most of the styling jo
 
 ### Step 3: Using jQuery Mobile
 
-In order to use jQuery Mobile, we need to add its JavaScript and stylesheet files to our app and give them correct references.
+In order to use jQuery Mobile, we need to add its JavaScript and stylesheet files to our app and give them correct references. Because jQuery Mobile depends on jQuery while is used by our app, the following references should be inserted after jQuery and before any of our app code.
 
     <link rel="stylesheet" media="only screen and (max-width: 480px)" href="stylesheets/jquery.mobile-1.0.css" />
     <script type="text/javascript" src="javascripts/jquery.mobile-1.0.js"></script>
@@ -214,7 +216,7 @@ We need to refresh the jQuery Mobile widgets after certain events.
         });
     });
 
-Because double click is not something we would do on a mobile device, we need to create a more mobile friendly interaction for switching into edit mode. We use single touch in this case and we listen to `touchend` events. When we scroll the page it also triggers `touched` event, so we only want to capture `touchend` event without a previously `touchmove` event.
+Because double click is not something we would do on a mobile device, we need to create a more mobile friendly interaction for switching into edit mode. We use single touch in this case and we listen to `touchend` events. When we scroll the page it also triggers `touched` event, so we only want to capture `touchend` event without a previously `touchmove` event. Remember, any code we use here should be put into the `pageinit` event handle so all elements are ready before we reference to them.
 
     var touchMoved;
     
