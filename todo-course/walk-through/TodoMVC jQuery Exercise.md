@@ -146,7 +146,6 @@ We also need to set the text field with correct dimensions and font. Also a litt
         font-size: 24px;
         font-family: inherit;
         line-height: 1.4em;
-        border: 0;
         outline: none;
         padding: 6px;
         border: 1px solid #999999;
